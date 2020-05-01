@@ -11,6 +11,7 @@ Reference the section below which corresponds to your Predictor type: [Python](#
 ```yaml
 - name: <string>  # API name (required)
   endpoint: <string>  # the endpoint for the API (default: <api_name>)
+  local_port: <int>  # port to expose your API on your machine (applicable only when deploying to local environment)
   predictor:
     type: python
     path: <string>  # path to a python file with a PythonPredictor class definition, relative to the Cortex root (required)
@@ -52,6 +53,7 @@ See additional documentation for [autoscaling](autoscaling.md), [compute](comput
 ```yaml
 - name: <string>  # API name (required)
   endpoint: <string>  # the endpoint for the API (default: <api_name>)
+  local_port: <int>  # port to expose your API on your machine (applicable only when deploying to local environment)
   predictor:
     type: tensorflow
     path: <string>  # path to a python file with a TensorFlowPredictor class definition, relative to the Cortex root (required)
@@ -96,6 +98,7 @@ See additional documentation for [autoscaling](autoscaling.md), [compute](comput
 ```yaml
 - name: <string>  # API name (required)
   endpoint: <string>  # the endpoint for the API (default: <api_name>)
+  local_port: <int>  # port to expose your API on your machine (applicable only when deploying to local environment)
   predictor:
     type: onnx
     path: <string>  # path to a python file with an ONNXPredictor class definition, relative to the Cortex root (required)
